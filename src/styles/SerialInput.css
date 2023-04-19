@@ -8,13 +8,13 @@ form {
 label {
   display: inline-block;
   width: 160px;
-  height: 200px;
+  height: 80px;
   font-size: 1.2rem;
 }
 input {
   width: 140px;
   height: 25px;
-  margin-top: 2%;
+  /* margin-top: 2%; */
 }
 select {
   width: 140px;
@@ -27,4 +27,7 @@ select {
   border: 1px rgb(87, 181, 194) solid;
   height: 35px;
   border-radius: 20px;
+}
+.camUse {
+  display: block;
 }
