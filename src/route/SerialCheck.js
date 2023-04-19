@@ -1,26 +1,40 @@
-import React from "react";
-import "../styles/SerialInput.css";
+import React, { useState } from 'react';
+import '../styles/SerialInput.css';
+import { serialList } from '../api/API';
 
-class SerialCheck extends React.Component {
-  constructor(props) {
-    super();
+function SerialCheck() {
+  const [serials, setSerials] = useState([]);
 
-    this.state = {
-      menu: 0,
-    };
-  }
+  const handleButtonClick = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await serialList({});
+      console.log(response.data)
+      setSerials(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-  render() {
-    return (
-      <form>
-        <label>
-          <h4>S/N</h4>
-          <input type="text" name="inputSn" />
-        </label>
+  return (
+    <form>
+      <label>
+        <h4>S/N</h4>
+        <input type="text" name="inputSn" />
+      </label>
 
-        <input id="checkBtn" type="submit" value="조회" />
-      </form>
-    );
-  }
+      <input id="checkBtn" type="submit" onClick={handleButtonClick} value="조회" />
+
+      {serials.length > 0 && (
+        <ul>
+          {serials.map((serial) => (
+            <li key={serial.data}>{serial.data}</li>
+          ))}
+        </ul>
+      )}
+
+    </form>
+  );
 }
+
 export default SerialCheck;

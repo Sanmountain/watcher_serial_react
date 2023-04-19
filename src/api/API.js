@@ -2,16 +2,23 @@ import axios from "axios";
 
 const url = "http://43.200.27.132:9000/AndyLogen";
 
-export const serialCheck = (data) => {
+export const signUp = (data) => {
   return axios.post(`${url}/watcher/sign`, {
-    api: "serialCheck",
+    api: "signUp",
     data: [data],
   });
 };
 
-export const serialInput = (data) => {
-  return axios.post(`${url}/lose`, {
-    api: "serialInput",
+export const serialList = (data) => {
+  return axios.post(`${url}/watcher/serial`, {
+    api: "srList",
+    data: [data],
+  });
+};
+
+export const serialInsert = (data) => {
+  return axios.post(`${url}/watcher/serial`, {
+    api: "srIn",
     data: [data],
   });
 };
