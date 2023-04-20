@@ -13,24 +13,38 @@ function Header() {
     <div className="wrap">
       <div className="menuBar">
         <ul className="tabs">
-          <li
-            className={`${menu === 0 ? "active" : ""}`}
-            onClick={() => handleMenuClick(0)}
-          >
-            <Link to="/">조회</Link>
-          </li>
-          <li
-            className={`${menu === 1 ? "active" : ""}`}
-            onClick={() => handleMenuClick(1)}
-          >
-            <Link to="/SerialInput">입력</Link>
-          </li>
-          <li
-            className={`${menu === 2 ? "active" : ""}`}
-            onClick={() => handleMenuClick(2)}
-          >
-            <Link to="/SignUp">계정 생성</Link>
-          </li>
+          <Link to="/">
+            <li
+              className={`${menu === 0 ? "active" : ""}`}
+              onClick={() => handleMenuClick(0)}
+            >
+              조회
+            </li>
+          </Link>
+          <Link to="/SerialInput">
+            <li
+              className={`${menu === 1 ? "active" : ""}`}
+              onClick={() => handleMenuClick(1)}
+            >
+              입력
+            </li>
+          </Link>
+          <Link to="/SignUp">
+            <li
+              className={`${menu === 2 ? "active" : ""}`}
+              onClick={() => handleMenuClick(2)}
+            >
+              계정 생성
+            </li>
+          </Link>
+          <Link to="/BasicData">
+            <li
+              className={`${menu === 3 ? "active" : ""}`}
+              onClick={() => handleMenuClick(3)}
+            >
+              기초 자료
+            </li>
+          </Link>
         </ul>
       </div>
     </div>

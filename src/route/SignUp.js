@@ -20,6 +20,7 @@ function SignUp() {
         company: company,
       });
       console.log(response.data);
+      alert("계정 생성이 완료되었습니다.");
       // Handle the response data as needed
     } catch (error) {
       console.error(error);
@@ -38,37 +39,39 @@ function SignUp() {
   return (
     <form onSubmit={handleSignUp}>
       <label>
-        Username:
+        <h4>사용자 ID</h4>
         <input type="text" name="user_id" />
       </label>
       <label>
-        Password:
+        <h4>사용자 PW</h4>
         <input type="password" name="user_password" />
       </label>
       <label>
-        Branch Code:
+        <h4>점소 코드</h4>
         <input type="text" name="bran_cd" />
       </label>
       <label>
-        Branch Expiration:
+        <h4>점소 설명</h4>
         <input type="text" name="bran_exp" />
       </label>
       <label>
-        Camera Usable:
+        <h4>Cam 사용</h4>
         <select value={camUsable} onChange={handleCamUsableChange}>
           <option value="0">No</option>
           <option value="2">Yes</option>
         </select>
       </label>
       <label>
-        Company:
+        <h4>업체 선택</h4>
         <select value={company} onChange={handleCompanyChange}>
           <option value="logen">Logen</option>
           <option value="hanjin">Hanjin</option>
           <option value="lotte">Lotte</option>
         </select>
       </label>
-      <button type="submit">Sign up</button>
+      <button id="submitBtn" type="submit">
+        계정 생성
+      </button>
     </form>
   );
 }

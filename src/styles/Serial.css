@@ -22,9 +22,12 @@ select {
   height: 30px;
 }
 #submitBtn {
+  display: block;
+  margin: 0 auto;
   color: white;
   background-color: rgb(87, 181, 194);
   border: 1px rgb(87, 181, 194) solid;
+  width: 140px;
   height: 35px;
   border-radius: 20px;
 }
@@ -41,6 +44,16 @@ li {
   padding: 0;
   margin: 0;
 }
+#checkBtn {
+  color: white;
+  background-color: rgb(87, 181, 194);
+  border: 1px rgb(87, 181, 194) solid;
+  width: 100px;
+  height: 35px;
+  border-radius: 20px;
+  margin-right: 1%;
+}
+
 .checkTable {
   padding: 5%;
   margin: 0 auto;
@@ -51,6 +64,9 @@ li {
   height: 40px;
   vertical-align: middle;
   line-height: 30px;
+}
+#ulTable {
+  padding-top: 1%;
 }
 #ulTable > li:first-child > ul > li {
   background-color: #c9c9c9;
@@ -81,14 +97,6 @@ li {
 #ulTable > li > ul > li:first-child + li + li + li {
   width: 41%;
 } /*업데이트 시간 열 크기*/
-#checkBtn {
-  color: white;
-  background-color: rgb(87, 181, 194);
-  border: 1px rgb(87, 181, 194) solid;
-  width: 100px;
-  height: 35px;
-  border-radius: 10px;
-}
 
 .checkTable > ul > li:last-child {
   text-align: center;
@@ -115,3 +123,31 @@ li {
 #checkList > p:first-child + p + p + p {
   width: 41%;
 } /*업데이트 시간 열 크기*/
+
+/* 기초 자료 테이블 */
+#ulDataTable {
+  padding-top: 1%;
+}
+#ulDataTable > li:first-child > ul > li {
+  background-color: #c9c9c9;
+  font-weight: bold;
+  text-align: center;
+}
+#ulDataTable > li > ul {
+  clear: both;
+  padding: 0px auto;
+  position: relative;
+  min-width: 40px;
+}
+#ulDataTable > li > ul > li {
+  float: left;
+  font-size: 10pt;
+  border-bottom: 1px solid silver;
+  vertical-align: baseline;
+}
+#ulDataTable > li > ul > li:first-child {
+  width: 15%;
+} /*코드 열 크기*/
+#ulDataTable > li > ul > li:first-child + li {
+  width: 40%;
+} /*설명 열 크기*/
