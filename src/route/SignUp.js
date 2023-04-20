@@ -20,7 +20,11 @@ function SignUp() {
         company: company,
       });
       console.log(response.data);
-      alert("계정 생성이 완료되었습니다.");
+      if (response.data.result === "05") {
+        alert("이미 존재하는 아이디입니다.");
+      } else {
+        alert("계정 생성이 완료되었습니다.");
+      }
       // Handle the response data as needed
     } catch (error) {
       console.error(error);
