@@ -23,19 +23,18 @@ function SerialCheck() {
       <ul id="ulTable">
         <li>
           <ul>
-            <li>No</li>
-            <li>제목</li>
-            <li>작성일</li>
-            <li>작성자</li>
-            <li>조회수</li>
+            <li>Com</li>
+            <li>S/N</li>
+            <li>점소코드</li>
+            <li>업데이트 시간</li>
           </ul>
         </li>
         {serials.map((serial) => (
-          <li key={serial.dev_serial}>
-            <p>Com: {serial.company}</p>
-            <p>S/N: {serial.dev_serial}</p>
-            <p>점소코드: {serial.bran_cd}</p>
-            <p>업데이트 시간: {serial.update_date}</p>
+          <li id="checkList" key={serial.dev_serial}>
+            <p>{serial.company}</p>
+            <p>{serial.dev_serial}</p>
+            <p>{serial.bran_cd}</p>
+            <p>{serial.update_date}</p>
           </li>
         ))}
       </ul>
