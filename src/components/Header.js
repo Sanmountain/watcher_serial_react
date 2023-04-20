@@ -14,16 +14,22 @@ function Header() {
       <div className="menuBar">
         <ul className="tabs">
           <li
-            className={`${menu === 1 ? "active" : ""}`}
-            onClick={() => handleMenuClick(1)}
-          >
-            <Link to="/">입력</Link>
-          </li>
-          <li
             className={`${menu === 0 ? "active" : ""}`}
             onClick={() => handleMenuClick(0)}
           >
-            <Link to="/serialCheck">조회</Link>
+            <Link to="/">조회</Link>
+          </li>
+          <li
+            className={`${menu === 1 ? "active" : ""}`}
+            onClick={() => handleMenuClick(1)}
+          >
+            <Link to="/SerialInput">입력</Link>
+          </li>
+          <li
+            className={`${menu === 2 ? "active" : ""}`}
+            onClick={() => handleMenuClick(2)}
+          >
+            <Link to="/SignIn">계정 생성</Link>
           </li>
         </ul>
       </div>

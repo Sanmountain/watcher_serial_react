@@ -4,6 +4,7 @@
 }
 form {
   padding: 3%;
+  text-align: center;
 }
 label {
   display: inline-block;
@@ -20,8 +21,7 @@ select {
   width: 140px;
   height: 30px;
 }
-#submitBtn,
-#checkBtn {
+#submitBtn {
   color: white;
   background-color: rgb(87, 181, 194);
   border: 1px rgb(87, 181, 194) solid;
@@ -30,4 +30,26 @@ select {
 }
 .camUse {
   display: block;
+  margin: 0 auto;
+}
+
+/* serialCheck 테이블 부분 */
+ul,
+li {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.checkTable {
+  padding: 5%;
+  margin: 0 auto;
+}
+#checkBtn {
+  color: white;
+  background-color: rgb(87, 181, 194);
+  border: 1px rgb(87, 181, 194) solid;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
 }

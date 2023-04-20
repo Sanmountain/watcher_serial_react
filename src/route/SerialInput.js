@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/SerialInput.css";
+import "../styles/Serial.css";
 import { serialInsert } from "../api/API";
 
 function SerialInput() {
