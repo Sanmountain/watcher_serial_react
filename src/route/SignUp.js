@@ -22,8 +22,10 @@ function SignUp() {
       console.log(response.data);
       if (response.data.result === "05") {
         alert("이미 존재하는 아이디입니다.");
-      } else {
+      } else if (response.data.result === "00") {
         alert("계정 생성이 완료되었습니다.");
+      } else {
+        alert("빈칸을 입력해주세요.");
       }
       // Handle the response data as needed
     } catch (error) {

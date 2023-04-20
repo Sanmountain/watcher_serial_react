@@ -4,6 +4,7 @@ import "../styles/Serial.css";
 
 function SerialCheck() {
   const [serials, setSerials] = useState([]);
+  const [search, setSearch] = useState("");
 
   const handleButtonClick = async () => {
     try {
@@ -15,8 +16,22 @@ function SerialCheck() {
     }
   };
 
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const filteredSerials = serials.filter((serial) =>
+    serial.dev_serial.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div className="checkTable">
+      <input
+        type="text"
+        placeholder="Search by S/N"
+        value={search}
+        onChange={handleSearch}
+      />
       <button id="checkBtn" onClick={handleButtonClick}>
         시리얼 조회
       </button>
@@ -29,7 +44,7 @@ function SerialCheck() {
             <li>업데이트 시간</li>
           </ul>
         </li>
-        {serials.map((serial) => (
+        {filteredSerials.map((serial) => (
           <li id="checkList" key={serial.dev_serial}>
             <p>{serial.company}</p>
             <p>{serial.dev_serial}</p>

@@ -4,8 +4,6 @@ import "../styles/Serial.css";
 
 function BasicData() {
   const [snSerials, setSnSerials] = useState([]);
-  const [userSerials, setUserSerials] = useState([]);
-  const [codeSerials, setCodeSerials] = useState([]);
 
   const handleSnBtnClick = async () => {
     try {
@@ -22,8 +20,12 @@ function BasicData() {
       <button id="checkBtn" onClick={handleSnBtnClick}>
         점소
       </button>
-      <button id="checkBtn">사원</button>
-      <button id="checkBtn">코드</button>
+      <button id="checkBtn" onClick={handleSnBtnClick}>
+        사원
+      </button>
+      <button id="checkBtn" onClick={handleSnBtnClick}>
+        코드
+      </button>
       <ul id="ulDataTable">
         <li>
           <ul>
@@ -31,6 +33,12 @@ function BasicData() {
             <li>설명</li>
           </ul>
         </li>
+        {snSerials.map((serial) => (
+          <li key={serial.dev_serial}>
+            <p>{serial.bran_cd}</p>
+            <p>설명</p>
+          </li>
+        ))}
       </ul>
     </div>
   );
