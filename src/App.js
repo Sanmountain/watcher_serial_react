@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import SerialInput from "./route/SerialInput";
 import SerialCheck from "./route/SerialCheck";
-import SignIn from "./route/SignIn";
+import SignUp from "./route/SignUp";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path={"/"} element={<SerialCheck />}></Route>
         <Route path={"/SerialInput"} element={<SerialInput />}></Route>
-        <Route path={"/SignIn"} element={<SignIn />}></Route>
+        <Route path={"/SignUp"} element={<SignUp />}></Route>
       </Routes>
     </BrowserRouter>
   );

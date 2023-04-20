@@ -29,7 +29,7 @@ function Header() {
             className={`${menu === 2 ? "active" : ""}`}
             onClick={() => handleMenuClick(2)}
           >
-            <Link to="/SignIn">계정 생성</Link>
+            <Link to="/SignUp">계정 생성</Link>
           </li>
         </ul>
       </div>
