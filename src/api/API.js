@@ -22,3 +22,10 @@ export const serialInsert = (data) => {
     data: [data],
   });
 };
+
+export const codeSelect = (data) => {
+  return axios.post(`${url}/pda/code`, {
+    api: "codeSelect",
+    data: [data],
+  });
+};

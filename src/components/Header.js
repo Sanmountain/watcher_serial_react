@@ -18,7 +18,7 @@ function Header() {
               className={`${menu === 0 ? "active" : ""}`}
               onClick={() => handleMenuClick(0)}
             >
-              조회
+              시리얼 조회
             </li>
           </Link>
           <Link to="/SerialInput">
@@ -26,7 +26,7 @@ function Header() {
               className={`${menu === 1 ? "active" : ""}`}
               onClick={() => handleMenuClick(1)}
             >
-              입력
+              시리얼 등록
             </li>
           </Link>
           <Link to="/SignUp">
