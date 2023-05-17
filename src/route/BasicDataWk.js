@@ -23,6 +23,7 @@ export default function BasicDataWk() {
       const response = await workerSelect({});
       console.log("Received data:", response.data);
 
+      //데이터 반대로
       const reverseData = response.data.data.reverse();
       setWkSerials(reverseData);
       setIsLoading(false);
