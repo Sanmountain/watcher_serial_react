@@ -22,7 +22,9 @@ export default function BasicDataWk() {
     try {
       const response = await workerSelect({});
       console.log("Received data:", response.data);
-      setWkSerials(response.data.data);
+
+      const reverseData = response.data.data.reverse();
+      setWkSerials(reverseData);
       setIsLoading(false);
     } catch (error) {
       console.error(error);
