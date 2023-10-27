@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+.menuBar {
+  background: rgb(87, 181, 194);
+  width: 100%;
+}
+.tabs li {
+  font-size: 1rem;
+  font-weight: bold;
+  display: inline-block;
+  color: aliceblue;
+  padding: 1rem;
+}
+.tabs li.active {
+  background-color: rgb(44, 94, 100);
+  height: 100%;
+}

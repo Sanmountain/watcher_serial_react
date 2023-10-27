@@ -1,0 +1,186 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+form {
+  padding: 3%;
+  text-align: center;
+}
+label {
+  display: inline-block;
+  width: 160px;
+  height: 80px;
+  font-size: 1.2rem;
+}
+input {
+  width: 140px;
+  height: 25px;
+  /* margin-top: 2%; */
+}
+select {
+  width: 140px;
+  height: 30px;
+}
+#submitBtn {
+  display: block;
+  margin: 0 auto;
+  color: white;
+  background-color: rgb(87, 181, 194);
+  border: 1px rgb(87, 181, 194) solid;
+  width: 140px;
+  height: 35px;
+  border-radius: 20px;
+}
+.camUse {
+  display: block;
+  margin: 0 auto;
+}
+
+/* serialCheck 테이블 부분 */
+ul,
+li {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+#checkBtn {
+  color: white;
+  background-color: rgb(87, 181, 194);
+  border: 1px rgb(87, 181, 194) solid;
+  width: 100px;
+  height: 35px;
+  border-radius: 20px;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.checkTable {
+  padding: 5%;
+  margin: 0 auto;
+}
+.checkTable > ul > li:first-child {
+  text-align: center;
+  font-size: 1rem;
+  height: 40px;
+  vertical-align: middle;
+  line-height: 30px;
+}
+#ulTable {
+  padding-top: 1%;
+}
+#ulTable > li:first-child > ul > li {
+  background-color: #c9c9c9;
+  font-weight: bold;
+  text-align: center;
+}
+#ulTable > li > ul {
+  clear: both;
+  padding: 0px auto;
+  position: relative;
+  min-width: 40px;
+}
+#ulTable > li > ul > li {
+  float: left;
+  font-size: 10pt;
+  border-bottom: 1px solid silver;
+  vertical-align: baseline;
+}
+#ulTable > li > ul > li:first-child {
+  width: 15%;
+} /*Com 열 크기*/
+#ulTable > li > ul > li:first-child + li {
+  width: 15%;
+} /*S/N 열 크기*/
+#ulTable > li > ul > li:first-child + li + li {
+  width: 15%;
+} /*점소코드 열 크기*/
+#ulTable > li > ul > li:first-child + li + li + li {
+  width: 41%;
+} /*업데이트 시간 열 크기*/
+
+.checkTable > ul > li:last-child {
+  text-align: center;
+  font-size: 1rem;
+  height: 40px;
+  vertical-align: middle;
+  line-height: 30px;
+}
+#checkList > p {
+  float: left;
+  font-size: 10pt;
+  border-bottom: 1px solid silver;
+  vertical-align: baseline;
+}
+#checkList > p:first-child {
+  width: 15%;
+} /*Com 열 크기*/
+#checkList > p:first-child + p {
+  width: 15%;
+} /*S/N 열 크기*/
+#checkList > p:first-child + p + p {
+  width: 15%;
+} /*점소코드 열 크기*/
+#checkList > p:first-child + p + p + p {
+  width: 41%;
+} /*업데이트 시간 열 크기*/
+
+/* 기초 자료 테이블 */
+#ulDataTable {
+  padding-top: 1%;
+}
+#ulDataTable > li:first-child > ul > li {
+  background-color: #c9c9c9;
+  font-weight: bold;
+  text-align: center;
+}
+#ulDataTable > li > ul {
+  clear: both;
+  padding: 0px auto;
+  position: relative;
+  min-width: 40px;
+}
+#ulDataTable > li > ul > li {
+  float: left;
+  font-size: 10pt;
+  border-bottom: 1px solid silver;
+  vertical-align: baseline;
+}
+#ulDataTable > li > ul > li:first-child {
+  width: 15%;
+} /*코드 열 크기*/
+#ulDataTable > li > ul > li:first-child + li {
+  width: 40%;
+} /*설명 열 크기*/
+
+#checkList2 > div > p,
+#checkList2 > div > input {
+  display: block;
+  float: left;
+  font-size: 10pt;
+  border-bottom: 1px solid silver;
+}
+#checkList2 > div > p:first-child {
+  width: 15%;
+} /*Com 열 크기*/
+#checkList2 > div > p:first-child + p {
+  width: 40%;
+} /*S/N 열 크기*/
+
+.checkTable .checkTable2 {
+  margin-top: 1%;
+}
+
+/* 기초자료 인풋창 */
+.checkTable2 input {
+  margin-left: 1%;
+}
+#ulDataTable {
+  display: flex;
+  flex-direction: column;
+}
+
+#checkList2 button {
+  margin: 0;
+  padding: 0;
+}

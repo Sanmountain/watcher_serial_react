@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.signupForm {
+  padding: 3%;
+  width: 95%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.signupForm > label {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+
+  align-items: center;
+}
+.signupForm > label > h4 {
+  font-size: 1.2rem;
+  width: 300px;
+  justify-content: center;
+}
+
+#signupBtn {
+  display: block;
+  margin: 0 auto;
+  color: white;
+  background-color: rgb(87, 181, 194);
+  border: 1px rgb(87, 181, 194) solid;
+  width: 140px;
+  height: 35px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
